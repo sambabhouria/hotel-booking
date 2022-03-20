@@ -37,7 +37,6 @@ const PasswordScreen: React.FC = () => {
             setConfirmPassword("");
         }
     }, [success, dispatch]);
-    
 
   return (
       <Container>
@@ -50,30 +49,30 @@ const PasswordScreen: React.FC = () => {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="oldPassword" className="mb-3">
                         <Form.Label>Old Password</Form.Label>
-                        <Form.Control 
-                            type="password" 
-                            value={oldPassword} 
-                            placeholder="Old Password" 
+                        <Form.Control
+                            type="password"
+                            value={oldPassword}
+                            placeholder="Old Password"
                             onChange={(e) => setOldPassword(e.target.value)}
                         >
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="newPassword" className="mb-3">
                         <Form.Label>New Password</Form.Label>
-                        <Form.Control 
-                            type="password" 
-                            value={newPassword} 
-                            placeholder="New Password" 
+                        <Form.Control
+                            type="password"
+                            value={newPassword}
+                            placeholder="New Password"
                             onChange={(e) => setNewPassword(e.target.value)}
                         >
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="confirmPassword" className="mb-3">
                         <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control 
-                            type="password" 
-                            value={confirmPassword} 
-                            placeholder="Confirm Password" 
+                        <Form.Control
+                            type="password"
+                            value={confirmPassword}
+                            placeholder="Confirm Password"
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         >
                         </Form.Control>

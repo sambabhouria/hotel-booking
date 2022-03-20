@@ -65,14 +65,14 @@ const AdminEditRoomScreen = () => {
       setOldImages(room.images);
     }
   }, [dispatch, room, successUpdate, id]);
-  
+
   const removeImage = (imageId: string) => {
     const removedImage: any = oldImages.filter((e: TImage) => e._id !== imageId);
     setOldImages(removedImage);
   }
 
     const uploadImagesHandler = (e: React.FormEvent) => {
-        
+
         const target = e.target as HTMLInputElement;
 
         if (!target.files?.length) {
@@ -95,7 +95,7 @@ const AdminEditRoomScreen = () => {
         }
 
         try {
-            
+
             const config = {
                 headers: {
                     "Content-Type": "multipart/form-data"
@@ -134,7 +134,7 @@ const AdminEditRoomScreen = () => {
                         <Form.Label>
                             Name
                         </Form.Label>
-                        <Form.Control 
+                        <Form.Control
                             type="text"
                             placeholder="Name"
                             name="name"
@@ -223,9 +223,9 @@ const AdminEditRoomScreen = () => {
                     <Row className="mb-3">
                         <Col md={2} sm={12}>
                             <Form.Group controlId="internet">
-                                <Form.Check 
-                                    type="checkbox" 
-                                    label="Internet" 
+                                <Form.Check
+                                    type="checkbox"
+                                    label="Internet"
                                     checked={internet ? true : false}
                                     onChange={(e) => setInternet(!internet)}
                                 />
@@ -233,8 +233,8 @@ const AdminEditRoomScreen = () => {
                         </Col>
                         <Col md={2} sm={12}>
                             <Form.Group controlId="breakfast">
-                                <Form.Check 
-                                    type="checkbox" 
+                                <Form.Check
+                                    type="checkbox"
                                     label="Breakfast"
                                     checked={breakfast ? true : false}
                                     onChange={(e) => setBreakfast(!breakfast)}
@@ -243,9 +243,9 @@ const AdminEditRoomScreen = () => {
                         </Col>
                         <Col md={2} sm={12}>
                             <Form.Group controlId="airConditioned">
-                                <Form.Check 
-                                    type="checkbox" 
-                                    label="Air Conditioned" 
+                                <Form.Check
+                                    type="checkbox"
+                                    label="Air Conditioned"
                                     checked={airConditioned ? true : false}
                                     onChange={(e) => setAirConditioned(!airConditioned)}
                                 />
@@ -253,9 +253,9 @@ const AdminEditRoomScreen = () => {
                         </Col>
                         <Col md={2} sm={12}>
                             <Form.Group controlId="petsAllowed">
-                                <Form.Check 
-                                    type="checkbox" 
-                                    label="Pets Allowed" 
+                                <Form.Check
+                                    type="checkbox"
+                                    label="Pets Allowed"
                                     checked={petsAllowed ? true : false}
                                     onChange={(e) => setPetsAllowed(!petsAllowed)}
                                 />
@@ -263,9 +263,9 @@ const AdminEditRoomScreen = () => {
                         </Col>
                         <Col md={2} sm={12}>
                             <Form.Group controlId="roomCleaning">
-                                <Form.Check 
-                                    type="checkbox" 
-                                    label="Room Cleaning" 
+                                <Form.Check
+                                    type="checkbox"
+                                    label="Room Cleaning"
                                     checked={roomCleaning ? true : false}
                                     onChange={(e) => setRoomCleaning(!roomCleaning)}
                                 />
@@ -276,12 +276,12 @@ const AdminEditRoomScreen = () => {
                         <Form.Label>
                             Price
                         </Form.Label>
-                        <Form.Control 
+                        <Form.Control
                             type="number"
                             value={Number(price)}
                             onChange={(e) => setPrice(Number(e.target.value))}
                             placeholder="Price Per Night"
-                            min="10" 
+                            min="10"
                             max="100"
                         />
                     </FormGroup>
@@ -289,7 +289,7 @@ const AdminEditRoomScreen = () => {
                         <Form.Label>
                             Images
                         </Form.Label>
-                        <Form.Control 
+                        <Form.Control
                             type="file"
                             name="images"
                             onChange={uploadImagesHandler}

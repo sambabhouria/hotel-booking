@@ -33,9 +33,8 @@ const ProfileScreen: React.FC = () => {
             setEmail(userInfo.email);
             setAvatar(userInfo.avatar);
         }
-      
+
     }, [userInfo, dispatch]);
-    
 
     const handleUpload = async (e: React.ChangeEvent) => {
 
@@ -79,28 +78,28 @@ const ProfileScreen: React.FC = () => {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="name" className="mb-3">
                         <Form.Label>Full Name</Form.Label>
-                        <Form.Control 
-                            type="text" 
-                            value={name} 
-                            placeholder="Full Name" 
+                        <Form.Control
+                            type="text"
+                            value={name}
+                            placeholder="Full Name"
                             onChange={(e) => setName(e.target.value)}
                         >
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="email" className="mb-3">
                         <Form.Label>E-Mail</Form.Label>
-                        <Form.Control 
-                            type="email" 
-                            value={email} 
-                            placeholder="E-Mail" 
+                        <Form.Control
+                            type="email"
+                            value={email}
+                            placeholder="E-Mail"
                             onChange={(e) => setEmail(e.target.value)}
                         >
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="avatar" className="mb-3">
                         <Form.Label>Avatar</Form.Label>
-                        <Form.Control 
-                            type="file" 
+                        <Form.Control
+                            type="file"
                             placeholder="Avatar"
                             name="image"
                             onChange={handleUpload}

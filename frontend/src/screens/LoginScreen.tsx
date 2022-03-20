@@ -28,7 +28,6 @@ const LoginScreen: React.FC = () => {
             navigate("/");
         }
     }, [userInfo, success, dispatch]);
-    
 
   return (
       <Container>
@@ -39,20 +38,20 @@ const LoginScreen: React.FC = () => {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="email" className="mb-3">
                         <Form.Label>E-Mail</Form.Label>
-                        <Form.Control 
-                            type="email" 
-                            value={email} 
-                            placeholder="E-Mail" 
+                        <Form.Control
+                            type="email"
+                            value={email}
+                            placeholder="E-Mail"
                             onChange={(e) => setEmail(e.target.value)}
                         >
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="password" className="mb-3">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control 
-                            type="password" 
-                            value={password} 
-                            placeholder="Password" 
+                        <Form.Control
+                            type="password"
+                            value={password}
+                            placeholder="Password"
                             onChange={(e) => setPassword(e.target.value)}
                         >
                         </Form.Control>

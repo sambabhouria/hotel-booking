@@ -109,7 +109,7 @@ const AdminCreateRoomScreen = () => {
                         <Form.Label>
                             Name
                         </Form.Label>
-                        <Form.Control 
+                        <Form.Control
                             type="text"
                             placeholder="Name"
                             name="name"

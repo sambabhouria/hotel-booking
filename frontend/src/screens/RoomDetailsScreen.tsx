@@ -123,9 +123,9 @@ const RoomDetailsScreen = () => {
 
         const bookingData = {
             room: id,
-            checkInDate, 
-            checkOutDate, 
-            amountPaid, 
+            checkInDate,
+            checkOutDate,
+            amountPaid,
             paymentInfo,
             daysOfStay,
         }
@@ -171,9 +171,9 @@ const RoomDetailsScreen = () => {
 
                             {errorCreateReview && <Message variant="danger">{errorCreateReview}</Message>}
                             {successCreateReview && <Message variant="success">Added Review</Message>}
-                            
+
                             <FormReview idRoom={room._id} />
-                            
+
                             <hr />
                             {loadingCreateReview && <Loader />}
 
