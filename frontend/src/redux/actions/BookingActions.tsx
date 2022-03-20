@@ -21,8 +21,8 @@ export const checkRoomBooking = (id: IRoom['_id'], checkInDate: Date, checkOutDa
 
     } catch (error: any) {
         dispatch({ 
-            type: actions.CHECK_ROOM_BOOKING_FAIL, 
-            payload: error.response && error.response.data.message ? 
+            type: actions.CHECK_ROOM_BOOKING_FAIL,
+            payload: error.response && error.response.data.message ?
             error.response.data.message : error.message });
     }
 
