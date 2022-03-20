@@ -111,7 +111,7 @@ const RoomDetailsScreen = () => {
     })
 
     const successPaymentHandler = (paymentResult: any) => {
-            
+
         const amountPaid = Number(room.pricePerNight) * Number(daysOfStay);
 
         const paymentInfo = {
@@ -222,7 +222,7 @@ const RoomDetailsScreen = () => {
                                             Please <Link to="/login">Sign In</Link> for booking
                                         </Message>
                                      )}
-                                
+
                                      {successBookingCreate && (
                                         <Message variant="success">
                                             Your booking has been paymented
