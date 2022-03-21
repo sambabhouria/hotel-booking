@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             </LinkContainer>
           </Nav>
           <Nav className="ml-auto align-items-center">
-            {userInfo ? 
+            {userInfo ?
             <NavDropdown className="dropdown-avatar" title={
               <div className="d-flex align-items-center">
                 <Image className="avatar" src={userInfo.avatar ? userInfo.avatar : `/uploads/user-default.jpg`} alt="Avatar" />
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
             </NavDropdown>
-            :         
+            :
             <>
               <LinkContainer to="/login">
                 <Nav.Link>Login</Nav.Link>

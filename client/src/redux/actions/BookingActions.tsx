@@ -65,9 +65,9 @@ export const getBookedDates = (roomId:  IRoom['_id']) => async (dispatch: Dispat
         dispatch({ type: actions.GET_BOOKED_DATES_SUCCESS, payload: data });
 
     } catch (error: any) {
-        dispatch({ 
-            type: actions.GET_BOOKED_DATES_FAIL, 
-            payload: error.response && error.response.data.message ? 
+        dispatch({
+            type: actions.GET_BOOKED_DATES_FAIL,
+            payload: error.response && error.response.data.message ?
             error.response.data.message : error.message });
     }
 
@@ -92,9 +92,9 @@ export const getMyBookings = () => async (dispatch: Dispatch, getState: any) => 
         dispatch({ type: actions.GET_MY_BOOKINGS_SUCCESS, payload: data });
 
     } catch (error: any) {
-        dispatch({ 
-            type: actions.GET_MY_BOOKINGS_FAIL, 
-            payload: error.response && error.response.data.message ? 
+        dispatch({
+            type: actions.GET_MY_BOOKINGS_FAIL,
+            payload: error.response && error.response.data.message ?
             error.response.data.message : error.message });
     }
 
