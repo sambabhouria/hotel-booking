@@ -31,9 +31,9 @@ const SearchRooms: React.FC<SearchRoomsParams> =
             <Col md={4}>
                 <FormGroup controlId="numOfBeds">
                     <Form.Label>Num of Beds</Form.Label>
-                    <Form.Select 
-                        name="numOfBeds" 
-                        value={numOfBeds} 
+                    <Form.Select
+                        name="numOfBeds"
+                        value={numOfBeds}
                         onChange={(e) => setNumOfBeds(e.target.value)} 
                         aria-label="Default select example"
                     >
@@ -48,9 +48,9 @@ const SearchRooms: React.FC<SearchRoomsParams> =
             <Col md={4}>
                 <FormGroup controlId="roomType">
                     <Form.Label>Room Type</Form.Label>
-                    <Form.Select 
+                    <Form.Select
                         name="roomType"
-                        value={roomType} 
+                        value={roomType}
                         onChange={(e) => setRoomType(e.target.value)} 
                         aria-label="Default select example"
                     >
