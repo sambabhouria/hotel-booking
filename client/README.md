@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# HotelBooking
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hotel Booking App Using The MERN Stack With TypeScript & Redux 🤩
 
-## Available Scripts
+ ![screenshot](1.png)
 
-In the project directory, you can run:
+## Features:
 
-### `yarn start`
+- Room reviews and ratings
+- Room pagination
+- Room search feature
+- User profile with bookings
+- Admin Room management
+- Admin User management
+- Admin Booking management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technology Stack:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- TypeScript
+- Node js
+- Express Js
+- MongoDB
+- JWT
+- React
+- React Bootstrap
+- Redux
+- React Paypal Button V2
 
-### `yarn test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Env Variables
 
-### `yarn build`
+Create a .env file in then root and add the following
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+NODE_ENV = development
+PORT = 5000
+MONGO_URI = your mongodb uri
+JWT_SECRET = 'abc123'
+PAYPAL_CLIENT_ID = your paypal client id
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Install Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm install
+cd frontend
+npm install
+```
 
-### `yarn eject`
+### Run
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+# Run frontend
+npm run client
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Run backend
+npm run server
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Version: 1.0.0
+- License: DMS
+- Author: DIALLO MAMADOU SAMBA
