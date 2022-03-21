@@ -33,7 +33,7 @@ const AdminCreateRoomScreen = () => {
     const { success, error } = useSelector((state: RootStateOrAny) => state.roomCreate);
 
     const uploadImagesHandler = (e: React.FormEvent) => {
-
+        
         const target = e.target as HTMLInputElement;
 
         if (!target.files?.length) {
@@ -56,7 +56,7 @@ const AdminCreateRoomScreen = () => {
         }
 
         try {
-
+            
             setUploadRoomLoading(true);
 
             const config = {
@@ -109,7 +109,7 @@ const AdminCreateRoomScreen = () => {
                         <Form.Label>
                             Name
                         </Form.Label>
-                        <Form.Control
+                        <Form.Control 
                             type="text"
                             placeholder="Name"
                             name="name"

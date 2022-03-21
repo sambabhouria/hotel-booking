@@ -40,7 +40,7 @@ const AdminEditUserScreen = () => {
             navigate("/");
         }
     }, [dispatch, user, id, successUpdate])
-
+    
     const handlerSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         dispatch(updateUser(user._id as string, { name, email, isAdmin }));

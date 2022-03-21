@@ -20,7 +20,7 @@ const AdminUsersScreen = () => {
     useEffect(() => {
         dispatch(fetchUsers(currentPage));
     }, [dispatch, currentPage, successDelete]);
-
+    
     const handleDelete = (id: IUser['_id']) => {
         dispatch(deleteUser(id));
     }

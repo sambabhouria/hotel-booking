@@ -16,6 +16,7 @@ const MyBookingsScreen = () => {
   useEffect(() => {
     dispatch(getMyBookings());
   }, [dispatch]);
+  
 
   return (
     <Container>
