@@ -35,13 +35,13 @@ const RegisterScreen: React.FC = () => {
         }
 
         const file = target.files[0];
+        // console.log("🚀 ~ file: RegisterScreen.tsx ~ line 38 ~ handleUpload ~ file", file)
 
         const formData = new FormData();
 
         formData.append("image", file);
 
         try {
-            
             const config = {
                 headers: {
                     "Content-Type": "multipart/form-data"
@@ -49,6 +49,7 @@ const RegisterScreen: React.FC = () => {
             }
 
             const { data } = await axios.post("/api/uploads", formData, config);
+            console.log("🚀 ~ file: RegisterScreen.tsx ~ line 52 ~ handleUpload ~ data", data)
 
             setAvatar(data[0].path);
 
@@ -62,7 +63,7 @@ const RegisterScreen: React.FC = () => {
         if(userInfo) {
             navigate("/");
         }
-    }, [dispatch, userInfo, success]);
+    }, [dispatch, userInfo, success, navigate]);
     
 
   return (

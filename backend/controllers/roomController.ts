@@ -7,6 +7,7 @@ import { IUserRequest } from '../models/User';
 // @Route /api/rooms
 // @Method GET
 export const getAll = asyncHandler(async(req: Request, res: Response) => {
+    console.log('in the get all rooms ')
 
     const pageSize = 4;
     const page = Number(req.query.pageNumber) || 1;

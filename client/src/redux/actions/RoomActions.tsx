@@ -5,6 +5,7 @@ import { IRoom, ICreateReview, TCreateRoom } from '../../interfaces/IRoom';
 
 export const fetchRooms = (keyword: string, numOfBeds: number | string, roomType: string, currentPage: number) => 
 async (dispatch: Dispatch) => {
+    console.log('in the fetch rooms actions')
     try {
         dispatch({ type: actions.FETCH_ROOMS_REQUEST });
 

@@ -8,9 +8,11 @@ const router = express.Router();
 const storage = multer.diskStorage({
   destination: function (req, file: any, cb) {
     cb(null, "uploads/");
+    // cb(null, "../../uploads/");
   },
   filename: function (req, file: any, cb) {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    console.log("file name", `${file.fieldname}-${uniqueSuffix}${path.extname(file.originalname)}`);
     cb(
       null,
       `${file.fieldname}-${uniqueSuffix}${path.extname(file.originalname)}`
@@ -26,6 +28,7 @@ function checkFileType(file: any, cb: any) {
   const mimetype = fileTypes.test(file.mimetype);
 
   if (extname && mimetype) {
+    console.log("verified", file)
     cb(null, true);
   } else {
     cb("Images only");
@@ -35,6 +38,7 @@ function checkFileType(file: any, cb: any) {
 const upload = multer({
   storage,
   fileFilter: function (req, file: any, cb: any) {
+    console.log("in the uploads files", file)
     checkFileType(file, cb);
   },
 });

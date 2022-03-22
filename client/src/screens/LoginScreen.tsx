@@ -27,8 +27,8 @@ const LoginScreen: React.FC = () => {
         if(success || userInfo) {
             navigate("/");
         }
-    }, [userInfo, success, dispatch]);
-    
+    }, [userInfo, success, dispatch, navigate]);
+
 
   return (
       <Container>
