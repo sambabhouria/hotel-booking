@@ -10,6 +10,7 @@ const Header: React.FC = () => {
 
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state: RootStateOrAny) => state.userLogin);
+  console.log("🚀 ~ file: Header.tsx ~ line 13 ~ userInfo", userInfo)
 
   const handleLogout = () => {
     dispatch(logout());
