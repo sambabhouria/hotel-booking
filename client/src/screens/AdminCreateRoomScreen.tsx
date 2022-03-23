@@ -46,6 +46,9 @@ const AdminCreateRoomScreen = () => {
 
     }
 
+    const redirectToHomePage = () => success &&  navigate('/')
+
+
     const handlerSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -76,6 +79,7 @@ const AdminCreateRoomScreen = () => {
                 dispatch(createRoom({ name, description, address, guestCapacity, numOfBeds, category: roomType, internet, airConditioned, breakfast, petsAllowed, roomCleaning, pricePerNight: price, images: allImages }));
                 setUploadRoomLoading(false);
                 dispatch({ type: CREATE_ROOM_RESET });
+                redirectToHomePage();
             }, 1000);
 
         } catch (error: any) {
@@ -84,11 +88,11 @@ const AdminCreateRoomScreen = () => {
 
     }
 
-    useEffect(() => {
-      if(success) {
-        navigate("/");
-      }
-    }, [dispatch, success]);
+    // useEffect(() => {
+    //   if(success) {
+    //     navigate("/");
+    //   }
+    // }, [dispatch, success]);
 
   return (
     <Container>

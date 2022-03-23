@@ -5,6 +5,7 @@ import Loader from './Loader';
 const OnlyAdmin = () => {
 
     const { userInfo, loading } = useSelector((state: RootStateOrAny) => state.userLogin);
+    console.log("🚀 ~ file: OnlyAdmin.tsx ~ line 8 ~ OnlyAdmin ~ userInfo", userInfo)
 
     if(loading) {
         return <Loader />
