@@ -14,13 +14,14 @@ const AdminUsersScreen = () => {
     const dispatch = useDispatch();
 
     const { loading, users, count, error } = useSelector((state: RootStateOrAny) => state.usersFetch);
+    console.log("🚀 ~ file: AdminUsersScreen.tsx ~ line 17 ~ AdminUsersScreen ~ users", users)
 
     const { loading: loadingDelete, success:successDelete, error: errorSuccess } = useSelector((state: RootStateOrAny) => state.userDelete);
 
     useEffect(() => {
         dispatch(fetchUsers(currentPage));
     }, [dispatch, currentPage, successDelete]);
-    
+
     const handleDelete = (id: IUser['_id']) => {
         dispatch(deleteUser(id));
     }
@@ -51,7 +52,7 @@ const AdminUsersScreen = () => {
                         <tr key={user._id}>
                             <td>{user._id}</td>
                             <td>
-                                <Image className="avatar" src={user.avatar ? user.avatar : `/uploads/user-default.jpg`} alt="Avatar" width="20" height="20" />
+                                <Image className="avatar" src={user.avatar ?  '../../'+ user.avatar : `../..//uploads/user-default.jpg`} alt="Avatar" width="20" height="20" />
                             </td>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
